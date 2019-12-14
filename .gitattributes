@@ -1,0 +1,4 @@
+  
+.gitattributes	export-ignore
+/social.json	export-ignore
+/LICENSE	export-ignore
