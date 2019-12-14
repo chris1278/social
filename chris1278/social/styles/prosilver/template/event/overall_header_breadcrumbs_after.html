@@ -1,0 +1,34 @@
+<!-- IF SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 5 or SHOW_SOCIAL_ICONS_ALL and U_ACP -->
+
+<li id="quick-links" class="rightside quick-links dropdown-container responsive-menu nav-icon-link<!-- IF not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH --> hidden<!-- ENDIF -->" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-users fa-fw" aria-hidden="true"></i><span>{L_SOCIAL_MEDIA_ICONS}</span>
+				
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+
+						<li class="separator"></li>
+					
+							<li>
+								<a href="{U_SOCIAL_FACEBOOK_URL}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> role="menuitem">
+									<i class="icon {SOCIAL_FACEBOOK_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{L_S_FACEBOOK}</span>
+								</a>
+							</li>
+						
+							<li>
+								<a href="{U_SOCIAL_TWITTER_URL}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> role="menuitem">
+									<i class="icon {SOCIAL_TWITTER_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{L_S_TWITTER}</span>
+								</a>
+							</li>
+													
+					<li class="separator"></li>
+
+					<!-- EVENT navbar_header_quick_links_after -->
+				</ul>
+			</div>
+		</li>
+	
+<!-- ENDIF -->
+
