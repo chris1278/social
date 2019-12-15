@@ -1,0 +1,43 @@
+/* topposters_acp.css
+------------------------------------*/
+
+fieldset {
+	border-radius: 10px;
+}
+
+.permission-info {
+	text-align: center
+}
+
+.testmode-aktiv {
+	border-radius: 10px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.social-disabled {
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.social-page-title {
+	font-size: 1.4em;
+}
+
+.copy-social {
+	font-size: 1em;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.icons-fs {
+	margin: auto;
+}
+
+.show-social-icons-all {
+	font-size: 1em;
+	font-weight: bold;
+	
+}
+

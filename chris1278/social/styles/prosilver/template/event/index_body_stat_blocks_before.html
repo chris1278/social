@@ -1,0 +1,21 @@
+<!-- IF SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 3 or SHOW_SOCIAL_ICONS_ALL and U_ACP-->
+		<a class="category<!-- IF S_SOCIALICONS_HIDDEN --> hidden-category<!-- ENDIF -->" style="display: none; height: 0"></a>
+		<div class="forabg">
+			<div class="inner">
+				<ul class="topiclist">
+					<li class="header">
+						<dl class="row-item">
+							<dt><i class="icon fa-users fa-fw icon-light-blue" aria-hidden="true"></i><span>{L_SOCIAL_MEDIA_ICONS}</span></dt>
+							<dd></dd>
+						</dl>
+						<a href="{U_SOCIALICONS_COLLAPSE_URL}" class="collapse-btn collapse-<!-- IF S_SOCIALICONS_HIDDEN -->show<!-- ELSE -->hide<!-- ENDIF -->" data-hidden="{S_SOCIALICONS_HIDDEN}" data-ajax="phpbb_collapse" data-overlay="true" title="{L_COLLAPSIBLE_CATEGORIES_TITLE}" style="display: none; line-height: 0;"></a>
+					</li>
+				</ul>
+				<div class="social_icons_panel topiclist social-bar forums collapsible">
+					
+							<!-- INCLUDE @chris1278_social/social.html -->
+					
+				</div>
+			</div>
+		</div>
+<!-- ENDIF -->
