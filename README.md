@@ -6,17 +6,17 @@
 
 Bitte beim Update wie folgt vorgehen:
 
-- 1) Zuerst das Verzeichnis forenroot/ext/chris1278/social/icons via Backup sichern.
+- Punkt 1: Zuerst das Verzeichnis forenroot/ext/chris1278/social/icons via Backup sichern.
 
-- 2) Im Adminbereich die Extension deaktivieren (Keine Arbeitsdaten löschen).
+- Punkt 2: Im Adminbereich die Extension deaktivieren (Keine Arbeitsdaten löschen).
 
-- 3) Das Verzeichnis forenroot/ext/chris1278/social löschen.
+- Punkt 3: Das Verzeichnis forenroot/ext/chris1278/social löschen.
 
-- 4) Die aktuelle Version auf den Server Spielen
+- Punkt 4: Die aktuelle Version auf den Server Spielen
 
-- 5) Das Verzeichnis /icons wieder herstellen ( siehe punkt 1 )
+- Punkt 5: Das Verzeichnis /icons wieder herstellen ( siehe punkt 1 )
 
-- 6) Zum Schluss Extension wieder aktivieren
+- Punkt 6: Zum Schluss Extension wieder aktivieren
 
 # Changelog 1.0.3 (2019-12-26)
 
