@@ -50,7 +50,7 @@ $lang = array_merge($lang, array(
 	'SOCIAL_ICONS_ENABLE'						=> 'Social Media Icons aktivieren',
 	'SOCIAL_ICONS_ENABLE_EXPLAIN'				=> 'Wenn deaktiviert, wird die Extension Social Media Icons abgeschaltet, ohne die Extension zu deinstallieren.<br><br><b>Standard: "JA"</b>',
 	'SOCIAL_ICONS_POSITION'						=> 'Position der Social Media Icons',
-	'SOCIAL_ICONS_POSITION_EXPLAIN'				=> 'Bestimmen Sie hier wo die Social Media Icons angezeigt werden sollen.<br><br><b>Standard: "Unter der Statistik anzeigen"</b>',
+	'SOCIAL_ICONS_POSITION_EXPLAIN'				=> 'Bestimmen Sie hier wo die Social Media Icons angezeigt werden sollen.<br><br><b>Standard: "Innerhalb der Navbar als Menu"</b>',
 	'SOCIAL_ICONS_FORUMLIST_BEFORE'				=> 'Über der Navbar',
 	'SOCIAL_ICONS_FORUMLIST_AFTER'				=> 'Unter der Navbar',
 	'SOCIAL_ICONS_ONLINE_LIST_BEFORE'			=> 'Über der Statistik anzeigen',
@@ -74,41 +74,42 @@ $lang = array_merge($lang, array(
 	'SOCIAL_FICONS_STANDARD'					=> '<b>  <- Font Awesome Icon für die restlichen Positionen</b>',
 	'SOCIAL_ICONS_POSS2_ENABLE'					=> 'Box-Ansicht',
 	'SOCIAL_ICONS_POS2_ENABLE_EXPLAIN'			=> 'Hier können Sie aussuchen, ob die Position "Unter der Statistik anzeigen" mit oder ohne Box-Ansicht ist (ähnlich der Optik der Forenkategorien). Diese Option ist beispielsweise gut geeignet, wenn Sie z. B. die Extension <a href="https://reyno41.bplaced.net/phpbb/viewtopic.php?f=41&t=205"><b>"Statblock"</b></a> von kirk installiert haben, um diese Anzeige der Optik anzupassen.<br> <br><b>Standard: "Nein"</b> ',
-	
-	//Language For Links
-	'ACP_LINKPLACEOLDER'						=> 'z.B. https://phpbb.de',
-	'ACP_FICON'   								=> 'Font Awesome Icon',
-	'ACP_FICON_EXPLAIN'							=> 'Geben Sie hier den Namen eines <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener noreferrer"><strong>Font Awesome Icons Version 4.7.0</strong></a> Symbols ein, das mit dem Seitenlink verwendet werden soll.<br><br> Dieses Icon wird dann für die Position "Innerhalb der Navbar als Menu" verwendet. Kann aber auch als Icon für die anderen Optionen verwendet werden.<br><br><b>Standard:</b> ',
-	
+	'ICONS_NAVMENU_INDEX'						=> 'Zeige Social-Media-Links auf allen Seiten',
+	'ICONS_NAVMENU_INDEX_EXPLAIN'				=> 'Zeigt das Social Media Links Menu auf allen Seiten an.<br><br><b>Standard: "Nein"</b>',
 
-	'ACP_FACEBOOK_URL'							=> 'Facebook-Link',
-	'ACP_FACEBOOK_URL_EXPLAIN'					=> 'Tragen Sie hier den Link ein. Achten Sie aber auf die absolute Schreibweise. z. B. https://www.phpbb.de immer mit HTTPS:// bzw. HTTP:// nur phpbb.de würde nicht geladen werden.',
-	'ACP_FACEBOOK_ICON_DATEI'					=> 'Dateiname des Icons',
-	'ACP_FACEBOOK_ICON_DATEI_EXPLAIN'			=> 'Fügen Sie hier den Dateinamen des Icons ein. Achten Sie auf die korrekte Schreibweise auch auf Groß- und Kleinschreibung.',
-	'ACP_FACEBOOK_ICON'							=> 'Das aktuelle Icon',
-	'ACP_FACEBOOK_ICON_EXPLAIN'					=> 'Hier sehen Sie die Vorschau auf das aktuell verwendete Icon.',
-	'ACP_FACEBOOK_FICON_DATEI'					=> 'Das aktuelle Fontawesome-Icon',
-	'ACP_FACEBOOK_FICON_DATEI_EXPLAIN'			=> 'Hier sehen Sie die Vorschau auf das aktuell verwendete Font Awesome Icon.',
-	
-	
-	'ACP_TWITTER_URL'							=> 'Twitter-Link',
-	'ACP_TWITTER_URL_EXPLAIN'					=> 'Tragen Sie hier den Link ein. Achten Sie aber auf die absolute Schreibweise. z. B. https://www.phpbb.de immer mit HTTPS:// bzw. HTTP:// nur phpbb.de würde nicht geladen werden.',
-	'ACP_TWITTER_ICON_DATEI'					=> 'Dateiname des Icons',
-	'ACP_TWITTER_ICON_DATEI_EXPLAIN'			=> 'Fügen Sie hier den Dateinamen des Icons ein. Achten Sie auf die korrekte Schreibweise auch auf Groß- und Kleinschreibung.',
-	'ACP_TWITTER_ICON'							=> 'Das aktuelle Icon',
-	'ACP_TWITTER_ICON_EXPLAIN'					=> 'Hier sehen Sie die Vorschau auf das aktuell verwendete Icon.',
-	'ACP_TWITTER_FICON_DATEI'					=> 'Das aktuelle Font Awesome Icons',
-	'ACP_TWITTER_FICON_DATEI_EXPLAIN'			=> 'Hier sehen Sie die Vorschau auf das aktuell verwendete Font Awesome Icon.',
-	
-	
-	
-	
+	//Language For Links
+	'ACP_INFOBOX'								=> 'Vorschau:',
+	'ACP_SISETTINGS'							=> 'Einstellungen:',
+	'SOCIAL_ICONS_ANZAHL'						=> 'Boxen-Anzahl',
+	'SOCIAL_ICONS_ANZAHL_EXPLAIN'				=> 'Hier können Sie die Anzahl der Boxen auswählen. Maximal 10 stück.',
+
+	'ACP_NAME_00'								=> 'Name des Social-Dienstes',
+	'ACP_NAME_00_EXPLAIN'						=> 'Trage Sie hier den Namen des Dienstes ein. <br> Dieser Eingetragene Namen wird in der Ansicht <b>"Innerhalb der Navbar als Menu"</b> verwendet.',
+	'ACP_LINKPLACEOLDER'						=> 'z.B. https://phpbb.de',
+	'ACP_LINKPLACEOLDER2'						=> 'z.B.Facebook',
+	'ACP_URL_00_FICON'   						=> 'Font Awesome Icon',
+	'ACP_URL_00_FICON_EXPLAIN'					=> 'Geben Sie hier den Namen eines <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener noreferrer"><strong>Font Awesome Icons Version 4.7.0</strong></a> Symbols ein, das mit dem Seitenlink verwendet werden soll.<br><br> Dieses Icon wird dann für die Position "Innerhalb der Navbar als Menu" verwendet. Kann aber auch als Icon für die anderen Optionen verwendet werden.',
+	'ACP_URL_00_ICON_DATEI'						=> 'Dateiname des Icons',
+	'ACP_URL_00_ICON_DATEI_EXPLAIN'				=> 'Fügen Sie hier den Dateinamen des Icons ein. Achten Sie auf die korrekte Schreibweise auch auf Groß- und Kleinschreibung.',
+	'ACP_URL_00_ICON'							=> 'Das aktuelle Icon',
+	'ACP_URL_00_ICON_EXPLAIN'					=> 'Hier sehen Sie die Vorschau auf das aktuell verwendete Icon.',
+	'ACP_URL_00_FICON_DATEI'					=> 'Das aktuelle Fontawesome-Icon',
+	'ACP_URL_00_FICON_DATEI_EXPLAIN'			=> 'Hier sehen Sie die Vorschau auf das aktuell verwendete Font Awesome Icon.',
+	'ACP_URL_00_EXPLAIN'						=> 'Trage Sie hier Ihren Link ein. Achten Sie aber auf die absolute Schreibweise. z. B. https://www.phpbb.de immer mit HTTPS:// bzw. HTTP:// nur phpbb.de würde nicht geladen werden.',
+
+	'ACP_URL_01'								=> 'Social Media Eintrag Nr. 01',
+	'ACP_URL_02'								=> 'Social Media Eintrag Nr. 02',
+	'ACP_URL_03'								=> 'Social Media Eintrag Nr. 03',
+	'ACP_URL_04'								=> 'Social Media Eintrag Nr. 04',
+	'ACP_URL_05'								=> 'Social Media Eintrag Nr. 05',
+	'ACP_URL_06'								=> 'Social Media Eintrag Nr. 06',
+	'ACP_URL_07'								=> 'Social Media Eintrag Nr. 07',
+	'ACP_URL_08'								=> 'Social Media Eintrag Nr. 08',
+	'ACP_URL_09'								=> 'Social Media Eintrag Nr. 09',
+	'ACP_URL_10'								=> 'Social Media Eintrag Nr. 10',
+
 	'ACP_ACT'									=> 'Social Media Icon Aktivieren',
 	'ACP_ACT_EXPLAIN'							=> 'Wählen Sie hier aus, ob Sie das Icon so aktivieren wollen oder nicht.',
-	
-
-
-
 
 	// Permission
 	'ACL_U_VIEW_SOCIAL_ICONS'					=> 'Kann die Social Media Einstellungen sehen',

@@ -1,34 +1,65 @@
-<!-- IF SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 5 or SHOW_SOCIAL_ICONS_ALL and U_ACP -->
+<!-- IF SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 5 or SHOW_SOCIAL_ICONS_ALL and U_ACP or ICONS_NAVMENU_INDEX and SOCIAL_ICONS_POSITION eq 5 -->
 
 <li id="quick-links" class="rightside quick-links dropdown-container responsive-menu nav-icon-link<!-- IF not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH --> hidden<!-- ENDIF -->" data-skip-responsive="true">
-			<a href="#" class="dropdown-trigger">
-				<i class="icon fa-users fa-fw" aria-hidden="true"></i><span>{L_SOCIAL_MEDIA_ICONS}</span>
-				
-			</a>
-			<div class="dropdown">
-				<div class="pointer"><div class="pointer-inner"></div></div>
+	<a href="#" class="dropdown-trigger"><i class="icon fa-users fa-fw" aria-hidden="true"></i><span>{L_SOCIAL_MEDIA_ICONS}</span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
 				<ul class="dropdown-contents" role="menu">
-
-						<li class="separator"></li>
-					
-							<li>
-								<a href="{U_SOCIAL_FACEBOOK_URL}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem">
-									<i class="icon {SOCIAL_FACEBOOK_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{L_S_FACEBOOK}</span>
-								</a>
-							</li>
-						
-							<li>
-								<a href="{U_SOCIAL_TWITTER_URL}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem">
-									<i class="icon {SOCIAL_TWITTER_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{L_S_TWITTER}</span>
-								</a>
-							</li>
-													
 					<li class="separator"></li>
-
+						<!-- IF SOCIAL_URL_01_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_01}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_01_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_01}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_02_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_02}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_02_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_02}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_03_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_03}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_03_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_03}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_04_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_04}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_04_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_04}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_05_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_05}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_05_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_05}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_06_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_06}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_06_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_06}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_07_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_07}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_07_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_07}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_08_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_08}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_08_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_08}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_09_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_09}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_09_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_09}</span></a>
+						</li>
+						<!-- ENDIF -->
+						<!-- IF SOCIAL_URL_10_ENABLE -->
+						<li>
+							<a href="{SOCIAL_URL_10}" <!-- IF SOCIAL_ICONS_LINKS_EXTERN -->target="_blank"<!-- ENDIF --> rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_10_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_10}</span></a>
+						</li>
+						<!-- ENDIF -->
+					<li class="separator"></li>
 					<!-- EVENT navbar_header_quick_links_after -->
 				</ul>
 			</div>
-		</li>
-	
+</li>
 <!-- ENDIF -->
 

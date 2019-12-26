@@ -50,7 +50,7 @@ $lang = array_merge($lang, array(
 	'SOCIAL_ICONS_ENABLE'						=> 'Social Media Icons activate',
 	'SOCIAL_ICONS_ENABLE_EXPLAIN'				=> 'If deactivated, the extension Social Media Icons is switched off without uninstalling the extension. <br> <br> <b> Standard: "YES" </b>',
 	'SOCIAL_ICONS_POSITION'						=> 'Position of social media icons',
-	'SOCIAL_ICONS_POSITION_EXPLAIN'				=> 'Here you determine where the social media icons should be displayed. <br> <br> <b> Standard: "Show under statistics" </b>',
+	'SOCIAL_ICONS_POSITION_EXPLAIN'				=> 'Here you determine where the social media icons should be displayed. <br> <br> <b> Standard: "Within the Navbar as a menu" </b>',
 	'SOCIAL_ICONS_FORUMLIST_BEFORE'				=> 'Over the Navbar',
 	'SOCIAL_ICONS_FORUMLIST_AFTER'				=> 'Under the navbar',
 	'SOCIAL_ICONS_ONLINE_LIST_BEFORE'			=> 'Show above the statistics',
@@ -74,45 +74,46 @@ $lang = array_merge($lang, array(
 	'SOCIAL_FICONS_STANDARD'					=> '<b>  <- Font Awesome icon for the remaining positions</b>',
 	'SOCIAL_ICONS_POSS2_ENABLE'					=> 'Box View',
 	'SOCIAL_ICONS_POS2_ENABLE_EXPLAIN'			=> 'Here you can choose whether the position "Show under statistics" is with or without a box view (similar to the optics of the forum categories). This option is suitable, for example, if you e.g. B. have installed the extension <a href="https://reyno41.bplaced.net/phpbb/viewtopic.php?f=41&t=205"> <b> "Statblock" </b> </a> from kirk to adapt this display to the visual appearance. <br> <br> <b> Standard: "No" </b> ',
-	
-	//Language For Links
-	'ACP_LINKPLACEOLDER'						=> 'z.B. https://phpbb.de',
-	'ACP_FICON'   								=> 'Font Awesome Icon',
-	'ACP_FICON_EXPLAIN'							=> 'Enter the name of a <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener noreferrer"> <strong> Font Awesome Icons Version 4.7.0 </ strong> </a> symbol to be used with the page link. <br> <br> This icon is then used for the position "Within the Navbar as a menu". But can also be used as an icon for the other options. <br> <br> <b> Standard: </b>',
-	
+	'ICONS_NAVMENU_INDEX'						=> 'Show social media links on all pages',
+	'ICONS_NAVMENU_INDEX_EXPLAIN'				=> 'Displays the Social Media Links menu on all pages. <br> <br> <b> Standard: "No" </b>',
 
-	'ACP_FACEBOOK_URL'							=> 'Facebook-Link',
-	'ACP_FACEBOOK_URL_EXPLAIN'					=> 'Enter the link here. But pay attention to the absolute spelling. z. B. https://www.phpbb.de always with HTTPS: // or HTTP: // only phpbb.de would not be loaded.',
-	'ACP_FACEBOOK_ICON_DATEI'					=> 'Filename of the icon',
-	'ACP_FACEBOOK_ICON_DATEI_EXPLAIN'			=> 'Insert the icon file name here. Pay attention to the correct spelling of upper and lower case.',
-	'ACP_FACEBOOK_ICON'							=> 'The current icon',
-	'ACP_FACEBOOK_ICON_EXPLAIN'					=> 'Here you see the preview of the currently used icon.',
-	'ACP_FACEBOOK_FICON_DATEI'					=> 'The current Fontawesome icon',
-	'ACP_FACEBOOK_FICON_DATEI_EXPLAIN'			=> 'Here you can see the preview of the Font Awesome icon currently in use.',
-	
-	
-	'ACP_TWITTER_URL'							=> 'Twitter-Link',
-	'ACP_TWITTER_URL_EXPLAIN'					=> 'Enter the link here. But pay attention to the absolute spelling. z. B. https://www.phpbb.de always with HTTPS: // or HTTP: // only phpbb.de would not be loaded.',
-	'ACP_TWITTER_ICON_DATEI'					=> 'Filename of the icon',
-	'ACP_TWITTER_ICON_DATEI_EXPLAIN'			=> 'Insert the icon file name here. Pay attention to the correct spelling of upper and lower case.',
-	'ACP_TWITTER_ICON'							=> 'The current icon',
-	'ACP_TWITTER_ICON_EXPLAIN'					=> 'Here you see the preview of the currently used icon.',
-	'ACP_TWITTER_FICON_DATEI'					=> 'The current Font Awesome Icons',
-	'ACP_TWITTER_FICON_DATEI_EXPLAIN'			=> 'Here you can see the preview of the Font Awesome icon currently in use.',
-	
-	
-	
-	
+	//Language For Links
+	'ACP_INFOBOX'								=> 'Preview:',
+	'ACP_SISETTINGS'							=> 'Settings:',
+	'SOCIAL_ICONS_ANZAHL'						=> 'Number of boxes',
+	'SOCIAL_ICONS_ANZAHL_EXPLAIN'				=> 'Here you can select the number of boxes. Maximum 10 pieces.',
+
+	'ACP_NAME_00'								=> 'Name of the social service',
+	'ACP_NAME_00_EXPLAIN'						=> 'Enter the name of the service here. <br> This registered name is used in the view <b> "Within the Navbar as a menu" </b>.',
+	'ACP_LINKPLACEOLDER'						=> 'z.B. https://phpbb.de',
+	'ACP_LINKPLACEOLDER2'						=> 'z.B.Facebook',
+	'ACP_URL_00_FICON'   						=> 'Font Awesome Icon',
+	'ACP_URL_00_FICON_EXPLAIN'					=> 'Enter the name of a <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener noreferrer"> <strong> Font Awesome Icons Version 4.7.0 </ strong> </a> symbol to be used with the page link. <br> <br> This icon is then used for the position "Within the Navbar as a menu". But can also be used as an icon for the other options.',
+	'ACP_URL_00_ICON_DATEI'						=> 'Filename of the icon',
+	'ACP_URL_00_ICON_DATEI_EXPLAIN'				=> 'Insert the icon file name here. Pay attention to the correct spelling of upper and lower case.',
+	'ACP_URL_00_ICON'							=> 'The current icon',
+	'ACP_URL_00_ICON_EXPLAIN'					=> 'Here you see the preview of the currently used icon.',
+	'ACP_URL_00_FICON_DATEI'					=> 'The current Font Awesome icon',
+	'ACP_URL_00_FICON_DATEI_EXPLAIN'			=> 'Here you can see a preview of the Font Awesome icon currently in use.',
+	'ACP_URL_00_EXPLAIN'						=> 'Enter your link here. But pay attention to the absolute spelling. z. B. https://www.phpbb.de always with HTTPS: // or HTTP: // only phpbb.de would not be loaded.',
+
+	'ACP_URL_01'								=> 'Social Media entry no. 01',
+	'ACP_URL_02'								=> 'Social Media entry no. 02',
+	'ACP_URL_03'								=> 'Social Media entry no. 03',
+	'ACP_URL_04'								=> 'Social Media entry no. 04',
+	'ACP_URL_05'								=> 'Social Media entry no. 05',
+	'ACP_URL_06'								=> 'Social Media entry no. 06',
+	'ACP_URL_07'								=> 'Social Media entry no. 07',
+	'ACP_URL_08'								=> 'Social Media entry no. 08',
+	'ACP_URL_09'								=> 'Social Media entry no. 09',
+	'ACP_URL_10'								=> 'Social Media entry no. 10',
+
 	'ACP_ACT'									=> 'Activate social media icon',
 	'ACP_ACT_EXPLAIN'							=> 'Select here whether you want to activate the icon or not.',
-	
-
-
-
 
 	// Permission
 	'ACL_U_VIEW_SOCIAL_ICONS'					=> 'Can see the social media settings',
 
 	// INFO
 	'SOCIAL_ICONS_VERSION_COPY'				=> 'phpBB Extension - Social Media Icons- Version %s - Powered by Chris1278',
-));	
+));

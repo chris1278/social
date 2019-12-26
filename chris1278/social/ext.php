@@ -18,12 +18,11 @@ class ext extends \phpbb\extension\base
 		$user = $this->container->get('user');
 		$user->add_lang_ext('chris1278/social', 'social');
 		$lang = $user->lang;
-		
-		if (!( (phpbb_version_compare(PHPBB_VERSION, '3.2.8', '>=') )) ) 
-		{
+			if (!( (phpbb_version_compare(PHPBB_VERSION, '3.2.8', '>=') )) )
+			{
 			$lang['EXTENSION_NOT_ENABLEABLE'] .= '<br>' . $user->lang('ERROR_MSG_3112_MISTMATCH');
 			$is_enableable = false;
-		}
+			}
 		$user->lang = $lang;
 
 		return $is_enableable;

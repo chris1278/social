@@ -59,6 +59,15 @@
 			</dd>
 		</dl>
 		<!-- ENDIF -->
+		<!-- IF SOCIAL_ICONS_POSITION eq 5 -->		
+		<dl>
+			<dt><label for="icons_navmenu_index">{L_ICONS_NAVMENU_INDEX}{L_COLON}</label><br /><span>{L_ICONS_NAVMENU_INDEX_EXPLAIN}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="icons_navmenu_index" value="1"<!-- IF ICONS_NAVMENU_INDEX --> id="icons_navmenu_index" checked="checked"<!-- ENDIF --> /> {L_ACTIV}</label>
+				<label><input type="radio" class="radio" name="icons_navmenu_index" value="0"<!-- IF not ICONS_NAVMENU_INDEX --> id="icons_navmenu_index" checked="checked"<!-- ENDIF --> /> {L_NOT_ACTIV}</label>
+			</dd>
+		</dl>
+		<!-- ENDIF -->
 		<!-- IF SOCIAL_ICONS_POSITION eq 6 -->		
 		<dl>
 			<dt><label for="social_enable">{L_ICONS_HEADER_INDEX}{L_COLON}</label><br /><span>{L_ICONS_HEADER_INDEX_EXPLAIN}</span></dt>
@@ -77,8 +86,9 @@
 		</dl>
 		
 		
+		
 	</fieldset>
-
+	
 	<p class="submit-buttons">
 		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
 		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
@@ -89,4 +99,5 @@
 	
 </form>
 
+	
 <!-- INCLUDE overall_footer.html -->

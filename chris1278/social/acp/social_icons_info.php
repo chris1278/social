@@ -25,7 +25,7 @@ class social_icons_info
 					'auth'		=> 'ext_chris1278/social && acl_a_board',
 					'cat'		=> array('ACP_SOCIAL_ICONS'),
 				),
-				
+
 				'link_settings'		=> array(
 					'title'		=> 'ACP_SOCIAL_ICONS_LINKS_SETTINGS',
 					'auth'		=> 'ext_chris1278/social && acl_a_board',

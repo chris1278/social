@@ -10,7 +10,6 @@
 
 namespace chris1278\social\migrations;
 
-
 class v_1_0_2 extends \phpbb\db\migration\migration
 {
 	static public function depends_on()
@@ -27,25 +26,18 @@ class v_1_0_2 extends \phpbb\db\migration\migration
 			array('config.add', array('social_icons_links_extern', 1)),
 			array('config.add', array('social_ficons_all_enable', 0)),
 			array('config.add', array('social_icons_pos2_enable', 0)),
-			
-			
-			
-			
+
 			/*Link einstellungen*/
 			array('config.add', array('social_facebook_url', '')),
 			array('config.add', array('social_facebook_url_enable', 1)),
 			array('config.add', array('social_facebook_icon', 'social_facebook.png')),
 			array('config.add', array('social_facebook_ficon', 'fa-facebook-official')),
-			
-			
-			
+
 			array('config.add', array('social_twitter_url', '')),
 			array('config.add', array('social_twitter_url_enable', 1)),
 			array('config.add', array('social_twitter_icon', 'social_twitter.png')),
 			array('config.add', array('social_twitter_ficon', 'fa-twitter-square')),
-			
-			
-			
+
 			array('module.add', array(
 				'acp',
 				'ACP_SOCIAL_ICONS',
@@ -54,7 +46,6 @@ class v_1_0_2 extends \phpbb\db\migration\migration
 					'modes'				=> array('link_settings'),
 				),
 			)),
-			
 		);
 	}
 }

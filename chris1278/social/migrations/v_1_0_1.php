@@ -28,9 +28,8 @@ class v_1_0_1 extends \phpbb\db\migration\migration
 			array('config.add', array('social_icons_version', '1.0.1')),
 			array('config.add', array('social_icons_enable', 1)),
 			array('config.add', array('show_social_icons_all', 0)),
-			array('config.add', array('social_icons_position', 4)),
+			array('config.add', array('social_icons_position', 5)),
 			array('permission.add', array('u_view_social_icons', true, 'u_')),
-			
 
 			array('module.add', array(
 				'acp',
@@ -46,9 +45,6 @@ class v_1_0_1 extends \phpbb\db\migration\migration
 					'modes'				=> array('settings'),
 				),
 			)),
-			
-			
-
 		);
 	}
 }

@@ -1,6 +1,14 @@
 /* topposters_acp.css
 ------------------------------------*/
+si {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
 
+.f12 {
+	text-align: center;
+}
 fieldset {
 	border-radius: 10px;
 }
@@ -38,6 +46,4 @@ fieldset {
 .show-social-icons-all {
 	font-size: 1em;
 	font-weight: bold;
-	
 }
-

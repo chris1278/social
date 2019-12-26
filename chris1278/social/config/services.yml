@@ -2,15 +2,15 @@ services:
     chris1278.social.listener:
         class: chris1278\social\event\listener
         arguments:
-            - @auth
-            - @config
-            - @dbal.conn
-            - @request
-            - @template
-            - @user
-            - @language
-            - %core.root_path%
-            - %core.php_ext%
-            - @?phpbb.collapsiblecategories.operator
+            - '@auth'
+            - '@config'
+            - '@dbal.conn'
+            - '@request'
+            - '@template'
+            - '@user'
+            - '@language'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+            - '@?phpbb.collapsiblecategories.operator'
         tags:
             - { name: event.listener }
