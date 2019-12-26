@@ -6,11 +6,11 @@
 
 Bitte beim Update wie folgt vorgehen:
 
-- 1. Zuerst das Verzeichnis forenroot/ext/chris1278/social/icons via Backup sichern.
+- 1 . Zuerst das Verzeichnis forenroot/ext/chris1278/social/icons via Backup sichern.
 
-- 2. Im Adminbereich die Extension deaktivieren (Keine Arbeitsdaten löschen).
+- 2 . Im Adminbereich die Extension deaktivieren (Keine Arbeitsdaten löschen).
 
-- 3. Das Verzeichnis forenroot/ext/chris1278/social löschen.
+- 3 . Das Verzeichnis forenroot/ext/chris1278/social löschen.
 
 - 4. Die aktuelle Version auf den Server Spielen
 
