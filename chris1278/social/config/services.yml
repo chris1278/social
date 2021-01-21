@@ -1,0 +1,23 @@
+imports:
+    - { resource: tables.yml }
+
+services:
+    chris1278.social.chris1278_config:
+        class: chris1278\social\core\chris1278_db
+        arguments:
+            - '@dbal.conn'
+            - '@cache.driver'
+            - '%tables.chris1278_config%'
+
+    chris1278.social.listener:
+        class: chris1278\social\event\listener
+        arguments:
+            - '@auth'
+            - '@chris1278.social.chris1278_config'
+            - '@config'
+            - '@template'
+            - '@language'
+            - '%core.php_ext%'
+            - '@?phpbb.collapsiblecategories.operator'
+        tags:
+            - { name: event.listener }

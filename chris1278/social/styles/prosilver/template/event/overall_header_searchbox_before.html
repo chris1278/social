@@ -1,0 +1,5 @@
+{% if SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 6 or SHOW_SOCIAL_ICONS_ALL and U_ACP or SHOW_SOCIAL_HEADER_ICONS_ALL and SOCIAL_ICONS_POSITION eq 6 %}
+	<dd class="social_header">  
+		 {% INCLUDE 'social.html' %}
+	<dd>
+{% endif %}

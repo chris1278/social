@@ -1,0 +1,2 @@
+parameters:
+    tables.chris1278_config: '%core.table_prefix%chris1278_social'

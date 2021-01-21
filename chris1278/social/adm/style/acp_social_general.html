@@ -1,0 +1,97 @@
+{% INCLUDECSS 'css/social_acp.css' %}
+{% include 'overall_header.html' %}
+
+	<h1 class="social-page-title">{{ lang('ACP_SOCIAL_ICONS_PAGE_TITLE') }}</h1>
+	<p>{{ lang('ACP_SOCIAL_ICONS_PAGE_TITLE_EXPLAIN') }}</p>
+
+
+	<fieldset class="permission-info">
+		{{ lang('ACP_SOCIAL_ICONS_PERMISSION_BEFORE') }}<a href="{U_USER_PERMISSIONS}"><strong>{{ lang('ACP_SOCIAL_ICONS_USERS_PERMISSIONS') }}</strong></a> {{ lang('ACP_ANDOR') }} <a href="{U_GROUP_PERMISSIONS}"><strong>{{ lang('ACP_SOCIAL_ICONS_GROUPS_PERMISSIONS') }}</strong></a>{{ lang('ACP_SOCIAL_ICONS_PERMISSION_AFTER') }}
+	</fieldset>
+	
+<form  method="post" action="{U_ACTION}">
+	<fieldset>
+		<dl>
+			<dt><label for="social_icons_enable">{{ lang('SOCIAL_ICONS_ENABLE') }}{{ lang('COLON') }}</label><br /><span>{{ lang('SOCIAL_ICONS_ENABLE_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="social_icons_enable" name="social_icons_enable" value="1"{% if SOCIAL_ICONS_ENABLE %} checked="checked"{% endif %} /> {{ lang('YES') }} </label>
+				<label><input type="radio" class="radio" name="social_icons_enable" value="0"{% if not SOCIAL_ICONS_ENABLE %} checked="checked"{% endif %} /> {{ lang('NO') }}  </label> 
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="show_social_icons_all">{{ lang('SHOW_SOCIAL_ICONS_ALL') }}{{ lang('COLON') }}</label><br /><span>{{ lang('SHOW_SOCIAL_ICONS_ALL_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="show_social_icons_all" name="show_social_icons_all" value="1"{% if SHOW_SOCIAL_ICONS_ALL %} checked="checked"{% endif %} /> {{ lang('YES') }} </label>
+				<label><input type="radio" class="radio" name="show_social_icons_all" value="0"{% if not SHOW_SOCIAL_ICONS_ALL %} checked="checked"{% endif %} /> {{ lang('NO') }}  </label> 
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="social_icons_position">{{ lang('SOCIAL_ICONS_POSITION') }}{{ lang('COLON') }}</label><br /><span>{{ lang('SOCIAL_ICONS_POSITION_EXPLAIN') }}</span></dt>
+			<dd>
+				<select name="social_icons_position" id="social_icons_position">
+					<option value="1" {% if SOCIAL_ICONS_POSITION eq 1 %} selected="selected"{% endif %}>{{ lang('SOCIAL_ICONS_FORUMLIST_BEFORE') }}</option>
+					<option value="2" {% if SOCIAL_ICONS_POSITION eq 2 %} selected="selected"{% endif %}>{{ lang('SOCIAL_ICONS_FORUMLIST_AFTER') }}</option>
+					<option value="3" {% if SOCIAL_ICONS_POSITION eq 3 %} selected="selected"{% endif %}>{{ lang('SOCIAL_ICONS_ONLINE_LIST_BEFORE') }}</option>
+					<option value="4" {% if SOCIAL_ICONS_POSITION eq 4 %} selected="selected"{% endif %}>{{ lang('SOCIAL_ICONS_STATISTICS_AFTER') }}</option>
+					<option value="5" {% if SOCIAL_ICONS_POSITION eq 5 %} selected="selected"{% endif %}>{{ lang('SOCIAL_ICONS_IN_NAVBAR') }}</option>
+					<option value="6" {% if SOCIAL_ICONS_POSITION eq 6 %} selected="selected"{% endif %}>{{ lang('SOCIAL_ICONS_IN_HEADER') }}</option>
+				</select>
+			</dd>
+		</dl>
+		{% if SOCIAL_ICONS_POSITION eq 4 %}
+		<dl>
+			<dt><label for="social_icons_pos2_enable">{{ lang('SOCIAL_ICONS_POSS2_ENABLE') }}{{ lang('COLON') }}</label><br /><span>{{ lang('SOCIAL_ICONS_POS2_ENABLE_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="social_icons_pos2_enable" name="social_icons_pos2_enable" value="1"{% if SOCIAL_ICONS_POSS2_ENABLE %} checked="checked"{% endif %} /> {{ lang('YES') }} </label>
+				<label><input type="radio" class="radio" name="social_icons_pos2_enable" value="0"{% if not SOCIAL_ICONS_POSS2_ENABLE %} checked="checked"{% endif %} /> {{ lang('NO') }}  </label> 
+			</dd>
+		</dl>
+		{% endif %}
+		
+		{% if SOCIAL_ICONS_POSITION eq 1 or SOCIAL_ICONS_POSITION eq 2 or SOCIAL_ICONS_POSITION eq 3 or SOCIAL_ICONS_POSITION eq 4 or SOCIAL_ICONS_POSITION eq 6 %}
+		<dl>
+			<dt><label for="social_ficons_all_enable">{{ lang('ACP_SOCIAL_FICONS_ALL_ENABLE') }}{{ lang('COLON') }}</label><br /><span>{{ lang('ACP_SOCIAL_FICONS_ALL_ENABLE_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="social_ficons_all_enable" name="social_ficons_all_enable" value="1"{% if SOCIAL_FICONS_ALL_ENABLE %} checked="checked"{% endif %} /> {{ lang('SICONS') }} </label>
+				<label><input type="radio" class="radio" name="social_ficons_all_enable" value="0"{% if not SOCIAL_FICONS_ALL_ENABLE %} checked="checked"{% endif %} /> {{ lang('FICONS') }}  </label> 
+			</dd>
+		</dl>
+		{% endif %}
+		{% if SOCIAL_ICONS_POSITION eq 5 %}
+		<dl>
+			<dt><label for="icons_navmenu_index">{{ lang('ICONS_NAVMENU_INDEX') }}{{ lang('COLON') }}</label><br /><span>{{ lang('ICONS_NAVMENU_INDEX_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="icons_navmenu_index" value="1" {% if ICONS_NAVMENU_INDEX %}  checked="checked" {% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="icons_navmenu_index" value="0" {% if not ICONS_NAVMENU_INDEX %}  checked="checked" {% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+		{% endif %}
+		{% if SOCIAL_ICONS_POSITION eq 6 %}
+		<dl>
+			<dt><label for="show_social_header_icons_all">{{ lang('ICONS_HEADER_INDEX') }}{{ lang('COLON') }}</label><br /><span>{{ lang('ICONS_HEADER_INDEX_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="show_social_header_icons_all" name="show_social_header_icons_all" value="1" {% if SHOW_SOCIAL_HEADER_ICONS_ALL %} checked="checked" {% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="show_social_header_icons_all" value="0" {% if not SHOW_SOCIAL_HEADER_ICONS_ALL %} checked="checked" {% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+		{% endif %}
+		<dl>
+			<dt><label for="social_icons_links_extern">{{ lang('SOCIAL_ICONS_LINKS_EXTERN') }}{{ lang('COLON') }}</label><br /><span>{{ lang('SOCIAL_ICONS_LINKS_EXTERN_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="social_icons_links_extern" name="social_icons_links_extern" value="1" {% if SOCIAL_ICONS_LINKS_EXTERN %} checked="checked" {% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_icons_links_extern" value="0" {% if not SOCIAL_ICONS_LINKS_EXTERN %} checked="checked" {% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+	</fieldset>
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+	{S_FORM_TOKEN}
+
+	<p class="copy-social">{SOCIAL_ICONS_VERSION}</p>
+	
+</form>
+
+	
+{% include 'overall_footer.html' %}

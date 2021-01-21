@@ -1,0 +1,26 @@
+{% if SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 3 or SHOW_SOCIAL_ICONS_ALL and U_ACP %}
+<div class="forabg tpos3">
+	<a class="category{% if SOCIALICONS_HIDDEN %} hidden-category{% endif %}" style="display: none; height: 0"></a>
+	<div class="inner">
+		<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt><i class="icon fa-users fa-fw icon-light-blue" aria-hidden="true"></i><span>{{ lang('SOCIAL_MEDIA_ICONS') }}</span></dt>
+				</dl>
+				{% set S_CC_FORUM_HIDDEN = SOCIALICONS_HIDDEN %}
+				{% set U_CC_COLLAPSE_URL = U_SOCIAL_COLLAPSE_URL %}
+				{% include '@phpbb_collapsiblecategories/collapsible_categories_button.html' ignore missing %}
+			</li>
+		</ul>
+		<div class="topiclist forums collapsible">
+			<ul class="topiclist forums">
+				<li class="row social-center">
+				{% INCLUDE 'social.html' %}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+{% endif %}
+

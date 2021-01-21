@@ -1,0 +1,64 @@
+{% if SOCIAL_ICONS_ENABLE and SCRIPT_NAME == "index" and SOCIAL_ICONS_POSITION eq 5 or SHOW_SOCIAL_ICONS_ALL and U_ACP or ICONS_NAVMENU_INDEX and SOCIAL_ICONS_POSITION eq 5 %}
+
+<li id="quick-links" class="rightside quick-links dropdown-container responsive-menu{% if not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH %} hidden {% endif %} " data-skip-responsive="true">
+	<a href="#" class="dropdown-trigger"><i class="icon fa-users fa-fw" aria-hidden="true"></i><span>{L_SOCIAL_MEDIA_ICONS}</span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+						{% if SOCIAL_URL_01_ENABLE and AMOUNT_OF_BOXES > 0 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_01}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_01_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_01}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_02_ENABLE and AMOUNT_OF_BOXES > 1 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_02}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_02_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_02}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_03_ENABLE and AMOUNT_OF_BOXES > 2 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_03}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_03_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_03}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_04_ENABLE and AMOUNT_OF_BOXES > 3 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_04}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_04_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_04}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_05_ENABLE and AMOUNT_OF_BOXES > 4 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_05}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_05_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_05}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_06_ENABLE and AMOUNT_OF_BOXES > 5 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_06}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_06_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_06}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_07_ENABLE and AMOUNT_OF_BOXES > 6 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_07}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_07_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_07}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_08_ENABLE and AMOUNT_OF_BOXES > 7 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_08}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_08_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_08}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_09_ENABLE and AMOUNT_OF_BOXES > 8 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_09}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_09_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_09}</span></a>
+						</li>
+						 {% endif %} 
+						{% if SOCIAL_URL_10_ENABLE and AMOUNT_OF_BOXES > 9 and AMOUNT_OF_BOXES <= 10 %} 
+						<li>
+							<a href="{SOCIAL_URL_10}" {% if SOCIAL_ICONS_LINKS_EXTERN %} target="_blank" {% endif %}  rel="noopener noreferrer" role="menuitem"><i class="icon {SOCIAL_URL_10_FICON} fa-fw icon-gray" aria-hidden="true"></i><span>{SOCIAL_NAME_10}</span></a>
+						</li>
+						 {% endif %} 
+				
+				</ul>
+			</div>
+</li>
+ {% endif %} 
+

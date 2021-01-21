@@ -1,0 +1,32 @@
+{
+	"name": "chris1278/social",
+	"type": "phpbb-extension",
+	"description": "Adds icons at various points, e.g. for Facebook, Twitter, etc. where you can also create links to your page.",
+	"homepage": "https://github.com/chris1278/social",
+	"version": "1.0.4",
+	"time": "2019-06-30",
+	"license": "GPL-2.0-only",
+	"authors": [
+		{
+			"name": "Christian Esch aka Chris1278",
+			"email": "smilie-man@gmx.de",
+			"homepage": "https://www.phpbb.de/community/memberlist.php?mode=viewprofile&u=87861",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.6,<8.0 "
+	},
+	"extra": {
+		"display-name": "Social Media Icons",
+			"soft-require": {
+			"phpbb/phpbb": ">= 3.2.8,<3.4"
+		},
+		"version-check": {
+			"host": "raw.githubusercontent.com",
+			"directory": "/Chris1278/social/master",
+			"filename": "social.json",
+			"ssl": true
+		}
+	}
+}

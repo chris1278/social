@@ -1,0 +1,37 @@
+/**
+*
+* Social Network Icons extension for the phpBB Forum Software package.
+*
+* @copyright (c) 2019 (Christian-Esch.de)
+* @license GNU General Public License, version 2 (GPL-2.0-only)
+*
+*/
+
+fieldset {
+	border-radius: 10px;
+}
+
+.social-page-title {
+	font-size: 1.4em;
+}
+
+.permission-info {
+	text-align: center
+
+}
+
+.fs-top {
+	padding: 0px;
+}
+
+.fs {
+	border-top: 2px solid #000000;
+	padding: 10px 0px;
+}
+
+
+.copy-social {
+	font-size: 1em;
+	margin-top: 1em;
+	text-align: center;
+}

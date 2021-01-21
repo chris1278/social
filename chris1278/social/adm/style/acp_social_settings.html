@@ -1,0 +1,448 @@
+{% INCLUDECSS 'css/social_acp.css' %}
+{% include 'overall_header.html' %}
+
+	<h1 class="social-page-title">{{ lang('ACP_SOCIAL_ICONS_PAGE_LINKS_TITLE') }}</h1>
+	<p>{{ lang('ACP_SOCIAL_ICONS_PAGE_LINKS_TITLE_EXPLAIN') }}</p>
+
+<form method="post" action="{U_ACTION}">
+	
+	<fieldset>
+	<dl>
+			<dt><label for="amount_of_boxes">{{ lang('AMOUNT_OF_BOXES') }}{{ lang('COLON') }}</label><br /><span>{{ lang('AMOUNT_OF_BOXES_EXPLAIN') }}</span></dt>
+			<dd>
+				<select name="amount_of_boxes" id="amount_of_boxes">
+					<option value="1"{% if AMOUNT_OF_BOXES eq 1 %} selected="selected"{% endif %}>1</option>
+					<option value="2"{% if AMOUNT_OF_BOXES eq 2 %} selected="selected"{% endif %}>2</option>
+					<option value="3"{% if AMOUNT_OF_BOXES eq 3 %} selected="selected"{% endif %}>3</option>
+					<option value="4"{% if AMOUNT_OF_BOXES eq 4 %} selected="selected"{% endif %}>4</option>
+					<option value="5"{% if AMOUNT_OF_BOXES eq 5 %} selected="selected"{% endif %}>5</option>
+					<option value="6"{% if AMOUNT_OF_BOXES eq 6 %} selected="selected"{% endif %}>6</option>
+					<option value="7"{% if AMOUNT_OF_BOXES eq 7 %} selected="selected"{% endif %}>7</option>
+					<option value="8"{% if AMOUNT_OF_BOXES eq 8 %} selected="selected"{% endif %}>8</option>
+					<option value="9"{% if AMOUNT_OF_BOXES eq 9 %} selected="selected"{% endif %}>9</option>
+					<option value="10"{% if AMOUNT_OF_BOXES eq 10 %} selected="selected"{% endif %}>10</option>
+
+					
+				</select>
+			</dd>
+		</dl>
+	</fieldset>
+	
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+	</p>
+	{S_FORM_TOKEN}
+		
+	<fieldset>
+		{% if AMOUNT_OF_BOXES > 0 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs-top">
+			<dl>
+				<dt><label for="social_url_01">{{ lang('ACP_URL_01') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_01" id="social_url_01" maxlength="255" size="40" value="{SOCIAL_URL_01}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_01">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_01" id="social_name_01" maxlength="255" size="40" value="{SOCIAL_NAME_01}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_01_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_01_icon" id="social_url_01_icon" maxlength="255" size="40" value="{SOCIAL_URL_01_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_01_ICON %}
+			<dl>
+				<dt><label for="social_url_01_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_01_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_01_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_01_ficon" id="social_url_01_ficon" maxlength="255" size="40" value="{SOCIAL_URL_01_FICON}"/></dd>
+			</dl>
+			{%if SOCIAL_URL_01_FICON %}
+			<dl>
+				<dt><label for="social_url_01_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_01_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_01_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_01_enable" value="1"{% if SOCIAL_URL_01_ENABLE %} id="social_url_01_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_01_enable" value="0"{% if not SOCIAL_URL_01_ENABLE %} id="social_url_01_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 1 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_02">{{ lang('ACP_URL_02') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_02" id="social_url_02" maxlength="255" size="40" value="{SOCIAL_URL_02}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_02">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_02" id="social_name_02" maxlength="255" size="40" value="{SOCIAL_NAME_02}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_02_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_02_icon" id="social_url_02_icon" maxlength="255" size="40" value="{SOCIAL_URL_02_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_02_ICON %}
+			<dl>
+				<dt><label for="social_url_02_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_02_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_02_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_02_ficon" id="social_url_02_ficon" maxlength="255" size="40" value="{SOCIAL_URL_02_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_02_FICON %}
+			<dl>
+				<dt><label for="social_url_02_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_02_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_02_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_02_enable" value="1"{% if SOCIAL_URL_02_ENABLE %} id="social_url_02_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_02_enable" value="0"{% if not SOCIAL_URL_02_ENABLE %} id="social_url_02_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 2 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_03">{{ lang('ACP_URL_03') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_03" id="social_url_03" maxlength="255" size="40" value="{SOCIAL_URL_03}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_03">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_03" id="social_name_03" maxlength="255" size="40" value="{SOCIAL_NAME_03}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_03_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_03_icon" id="social_url_03_icon" maxlength="255" size="40" value="{SOCIAL_URL_03_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_03_ICON %}
+			<dl>
+				<dt><label for="social_url_03_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_03_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_03_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_03_ficon" id="social_url_03_ficon" maxlength="255" size="40" value="{SOCIAL_URL_03_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_03_FICON %}
+			<dl>
+				<dt><label for="social_url_03_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_03_FICON} fa-fw icon-gray" aria-hidden="true"></i> {{ lang('SOCIAL_ICONS_IN_NAVBAR2') }} </dd>
+				<dd><i class="icon {SOCIAL_URL_03_FICON}  fa-4x icon-gray"  aria-hidden="true"></i> {{ lang('SOCIAL_FICONS_STANDARD') }} <dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_03_enable" value="1"{% if SOCIAL_URL_03_ENABLE %} id="social_url_03_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_03_enable" value="0"{% if not SOCIAL_URL_03_ENABLE %} id="social_url_03_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 3 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_04">{{ lang('ACP_URL_04') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_04" id="social_url_04" maxlength="255" size="40" value="{SOCIAL_URL_04}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_04">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_04" id="social_name_04" maxlength="255" size="40" value="{SOCIAL_NAME_04}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_04_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_04_icon" id="social_url_04_icon" maxlength="255" size="40" value="{SOCIAL_URL_04_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_04_ICON %}
+			<dl>
+				<dt><label for="social_url_04_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_04_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_04_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_04_ficon" id="social_url_04_ficon" maxlength="255" size="40" value="{SOCIAL_URL_04_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_04_FICON %}
+			<dl>
+				<dt><label for="social_url_04_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_04_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_04_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_04_enable" value="1"{% if SOCIAL_URL_04_ENABLE %} id="social_url_04_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_04_enable" value="0"{% if not SOCIAL_URL_04_ENABLE %} id="social_url_04_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 4 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_05">{{ lang('ACP_URL_05') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_05" id="social_url_05" maxlength="255" size="40" value="{SOCIAL_URL_05}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_05">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_05" id="social_name_05" maxlength="255" size="40" value="{SOCIAL_NAME_05}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_05_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_05_icon" id="social_url_05_icon" maxlength="255" size="40" value="{SOCIAL_URL_05_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_05_ICON %}
+			<dl>
+				<dt><label for="social_url_05_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_05_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_05_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_05_ficon" id="social_url_05_ficon" maxlength="255" size="40" value="{SOCIAL_URL_05_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_05_FICON %}
+			<dl>
+				<dt><label for="social_url_05_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_05_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_05_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_05_enable" value="1"{% if SOCIAL_URL_05_ENABLE %} id="social_url_05_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_05_enable" value="0"{% if not SOCIAL_URL_05_ENABLE %} id="social_url_05_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 5 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">
+			<dl>
+				<dt><label for="social_url_06">{{ lang('ACP_URL_06') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_06" id="social_url_06" maxlength="255" size="40" value="{SOCIAL_URL_06}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_06">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_06" id="social_name_06" maxlength="255" size="40" value="{SOCIAL_NAME_06}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_06_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_06_icon" id="social_url_06_icon" maxlength="255" size="40" value="{SOCIAL_URL_06_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_06_ICON %}
+			<dl>
+				<dt><label for="social_url_06_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_06_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_06_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_06_ficon" id="social_url_06_ficon" maxlength="255" size="40" value="{SOCIAL_URL_06_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_06_FICON %}
+			<dl>
+				<dt><label for="social_url_06_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_06_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_06_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_06_enable" value="1"{% if SOCIAL_URL_06_ENABLE %} id="social_url_06_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_06_enable" value="0"{% if not SOCIAL_URL_06_ENABLE %} id="social_url_06_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 6 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_07">{{ lang('ACP_URL_07') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_07" id="social_url_07" maxlength="255" size="40" value="{SOCIAL_URL_07}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_07">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_07" id="social_name_07" maxlength="255" size="40" value="{SOCIAL_NAME_07}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_07_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_07_icon" id="social_url_07_icon" maxlength="255" size="40" value="{SOCIAL_URL_07_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_07_ICON %}
+			<dl>
+				<dt><label for="social_url_07_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_07_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_07_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_07_ficon" id="social_url_07_ficon" maxlength="255" size="40" value="{SOCIAL_URL_07_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_07_FICON %}
+			<dl>
+				<dt><label for="social_url_07_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_07_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_07_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_07_enable" value="1"{% if SOCIAL_URL_07_ENABLE %} id="social_url_07_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_07_enable" value="0"{% if not SOCIAL_URL_07_ENABLE %} id="social_url_07_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 7 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_08">{{ lang('ACP_URL_08') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_08" id="social_url_08" maxlength="255" size="40" value="{SOCIAL_URL_08}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_08">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_08" id="social_name_08" maxlength="255" size="40" value="{SOCIAL_NAME_08}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_08_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_08_icon" id="social_url_08_icon" maxlength="255" size="40" value="{SOCIAL_URL_08_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_08_ICON %}
+			<dl>
+				<dt><label for="social_url_08_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_08_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_08_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_08_ficon" id="social_url_08_ficon" maxlength="255" size="40" value="{SOCIAL_URL_08_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_08_FICON %}
+			<dl>
+				<dt><label for="social_url_08_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_08_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_08_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_08_enable" value="1"{% if SOCIAL_URL_08_ENABLE %} id="social_url_08_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_08_enable" value="0"{% if not SOCIAL_URL_08_ENABLE %} id="social_url_08_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 8 and AMOUNT_OF_BOXES <= 10 %}
+		<div class="fs">	
+			<dl>
+				<dt><label for="social_url_09">{{ lang('ACP_URL_09') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_09" id="social_url_09" maxlength="255" size="40" value="{SOCIAL_URL_09}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_09">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_09" id="social_name_09" maxlength="255" size="40" value="{SOCIAL_NAME_09}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_09_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_09_icon" id="social_url_09_icon" maxlength="255" size="40" value="{SOCIAL_URL_09_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_09_ICON %}
+			<dl>
+				<dt><label for="social_url_09_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_09_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_09_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_09_ficon" id="social_url_09_ficon" maxlength="255" size="40" value="{SOCIAL_URL_09_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_09_FICON %}
+			<dl>
+				<dt><label for="social_url_09_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_09_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_09_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_09_enable" value="1"{% if SOCIAL_URL_09_ENABLE %} id="social_url_09_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_09_enable" value="0"{% if not SOCIAL_URL_09_ENABLE %} id="social_url_09_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+		{% if AMOUNT_OF_BOXES > 9 and AMOUNT_OF_BOXES <= 10 %}
+		 <div class="fs">	
+			<dl>
+				<dt><label for="social_url_10">{{ lang('ACP_URL_10') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_10" id="social_url_10" maxlength="255" size="40" value="{SOCIAL_URL_10}" placeholder="{{ lang('ACP_LINKPLACEOLDER') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_name_10">{{ lang('ACP_NAME_00') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_NAME_00_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_name_10" id="social_name_10" maxlength="255" size="40" value="{SOCIAL_NAME_10}" placeholder="{{ lang('ACP_LINKPLACEOLDER2') }}"  /></dd>
+			</dl>
+			<dl>
+				<dt><label for="social_url_10_icon">{{ lang('ACP_URL_00_ICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_10_icon" id="social_url_10_icon" maxlength="255" size="40" value="{SOCIAL_URL_10_ICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_10_ICON %}
+			<dl>
+				<dt><label for="social_url_10_icon">{{ lang('ACP_URL_00_ICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_ICON_EXPLAIN') }}</span></dt>
+				<dd><img style="border-radius:4px 4px 4px 4px;" alt="none" width="33px" height="33px" src="{ROOT_PATH}/ext/chris1278/social/icons/{SOCIAL_URL_10_ICON}"></dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label for="social_url_10_ficon">{{ lang('ACP_URL_00_FICON') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_EXPLAIN') }}</span></dt>
+				<dd><input type="text" name="social_url_10_ficon" id="social_url_10_ficon" maxlength="255" size="40" value="{SOCIAL_URL_10_FICON}"/></dd>
+			</dl>
+			{% if SOCIAL_URL_10_FICON %}
+			<dl>
+				<dt><label for="social_url_10_ficon">{{ lang('ACP_URL_00_FICON_DATEI') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_URL_00_FICON_DATEI_EXPLAIN') }}</span></dt>
+				<dd><i class="icon {SOCIAL_URL_10_FICON} fa-fw icon-gray" aria-hidden="true"></i>{{ lang('SOCIAL_ICONS_IN_NAVBAR2') }}</dd>
+				<dd><i class="icon {SOCIAL_URL_10_FICON}  fa-4x icon-gray"  aria-hidden="true"></i>{{ lang('SOCIAL_FICONS_STANDARD') }}<dd>
+			</dl>
+			{% endif %}
+			<dl>
+				<dt><label>{{ lang('ACP_ACT') }}{{ lang('COLON') }}</label><br><span>{{ lang('ACP_ACT_EXPLAIN') }}</span></dt>
+				<dd>
+				<label><input type="radio" class="radio" name="social_url_10_enable" value="1"{% if SOCIAL_URL_10_ENABLE %} id="social_url_10_enable" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="social_url_10_enable" value="0"{% if not SOCIAL_URL_10_ENABLE %} id="social_url_10_enable" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+				</dd>
+			</dl>
+		</div>
+		{% endif %}
+	</fieldset>
+	
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+	</p>
+	{S_FORM_TOKEN}
+
+</form>
+
+{% include 'overall_footer.html' %}
