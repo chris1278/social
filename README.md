@@ -9,3 +9,6 @@ Bitte die allte Version komplett löschen das heist deaktivieren und Arbeitsdate
 # Changelog 1.0.3 (2019-12-26)
 
 -> Administration Erweitert. Aktuell kann man bis zu 10 Icons einstellen. 
+
+
+[![Build Status](https://github.com/chris1278/social/workflows/Tests/badge.svg)](https://github.com/chris1278/social/actions)
